@@ -2,6 +2,7 @@
 # https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
 #
 # Binaries for programs and plugins
+/bin/
 *.exe
 *.exe~
 *.dll
@@ -26,6 +27,17 @@ go.work.sum
 
 # env file
 .env
+
+# Populated client configs carry real node addresses and private keys.
+# rnx resolves ./rnx-config.yml and ./config/rnx-config.yml, so devs may
+# drop theirs into the checkout - never let those reach the repo.
+# (config/rnx-config.yml.template is unaffected and stays tracked.)
+rnx-config.yml
+
+# Loose TLS material
+*.pem
+*.key
+*.crt
 
 # Editor/IDE
 # .idea/

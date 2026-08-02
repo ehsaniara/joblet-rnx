@@ -1,0 +1,58 @@
+name: Release
+
+on:
+  push:
+    tags: [ 'v*' ]
+
+permissions:
+  contents: write
+
+env:
+  GO_VERSION: '1.24'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v4
+        with:
+          go-version: ${{ env.GO_VERSION }}
+
+      - name: Get version
+        id: version
+        run: echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Build cross-platform CLI
+        run: |
+          mkdir -p dist
+          VPKG="github.com/ehsaniara/joblet-rnx/pkg/version"
+          VERSION="${{ steps.version.outputs.version }}"
+          BUILD_DATE=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+          LDFLAGS="-s -w -X ${VPKG}.Version=${VERSION} -X ${VPKG}.GitCommit=${GITHUB_SHA} -X ${VPKG}.GitTag=${VERSION} -X ${VPKG}.BuildDate=${BUILD_DATE} -X ${VPKG}.Component=rnx"
+
+          build() { GOOS=$1 GOARCH=$2 CGO_ENABLED=0 go build -ldflags "$LDFLAGS" -o "dist/$3" ./cmd/rnx; }
+          build linux   amd64 rnx-linux-amd64
+          build linux   arm64 rnx-linux-arm64
+          build darwin  amd64 rnx-darwin-amd64
+          build darwin  arm64 rnx-darwin-arm64
+          build windows amd64 rnx-windows-amd64.exe
+
+          cd dist
+          for p in linux-amd64 linux-arm64 darwin-amd64 darwin-arm64; do
+            tar -czf "rnx-${VERSION}-${p}.tar.gz" "rnx-${p}"
+          done
+          zip "rnx-${VERSION}-windows-amd64.zip" rnx-windows-amd64.exe
+          sha256sum *.tar.gz *.zip > checksums.txt
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*.tar.gz
+            dist/*.zip
+            dist/checksums.txt
+          generate_release_notes: true

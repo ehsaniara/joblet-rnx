@@ -1,0 +1,27 @@
+# rnx client configuration.
+#
+# rnx resolves this file from (first match wins):
+#   $RNX_CONFIG, ./rnx-config.yml, ./config/rnx-config.yml,
+#   ~/.rnx/rnx-config.yml, /etc/joblet/rnx-config.yml,
+#   /opt/joblet/config/rnx-config.yml
+#
+# The joblet installer generates a populated rnx-config.yml with embedded
+# certificates on the server; copy it to ~/.rnx/rnx-config.yml on the client.
+version: "1.0"
+nodes:
+  default:
+    address: "127.0.0.1:50051"
+    isDefault: true          # used when --node is omitted
+    # Embedded PEM mTLS material (from the joblet server's cert generation):
+    cert: |
+      -----BEGIN CERTIFICATE-----
+      ...client certificate...
+      -----END CERTIFICATE-----
+    key: |
+      -----BEGIN PRIVATE KEY-----
+      ...client private key...
+      -----END PRIVATE KEY-----
+    ca: |
+      -----BEGIN CERTIFICATE-----
+      ...CA certificate...
+      -----END CERTIFICATE-----
