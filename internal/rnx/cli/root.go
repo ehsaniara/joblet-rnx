@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/jobs"
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/resources"
-	"github.com/ehsaniara/joblet-rnx/pkg/config"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/jobs"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/resources"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/config"
 
 	"github.com/spf13/cobra"
 )

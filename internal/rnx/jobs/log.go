@@ -12,7 +12,7 @@ import (
 	"time"
 
 	pb "github.com/ehsaniara/joblet-proto/v2/gen"
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc/status"
 )

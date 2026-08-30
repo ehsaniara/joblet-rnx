@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
 
 	"github.com/spf13/cobra"
 )

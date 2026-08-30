@@ -61,7 +61,7 @@ jobs:
 
       - name: Build rnx
         run: |
-          VPKG="github.com/ehsaniara/joblet-rnx/pkg/version"
+          VPKG="github.com/ehsaniara/joblet-rnx/v6/pkg/version"
           VERSION=$(git describe --tags --always --dirty 2>/dev/null || echo "dev-$(git rev-parse --short HEAD)")
           LDFLAGS="-s -w -X ${VPKG}.Version=${VERSION} -X ${VPKG}.GitCommit=${GITHUB_SHA} -X ${VPKG}.Component=rnx"
           ext=""; [ "${{ matrix.goos }}" = "windows" ] && ext=".exe"

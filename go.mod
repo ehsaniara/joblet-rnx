@@ -1,4 +1,4 @@
-module github.com/ehsaniara/joblet-rnx
+module github.com/ehsaniara/joblet-rnx/v6
 
 go 1.24.0
 
