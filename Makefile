@@ -1,4 +1,4 @@
-# rnx — the Joblet CLI. Depends only on the published joblet-proto contract.
+# rnx - the Joblet CLI. Depends only on the published joblet-proto contract.
 .PHONY: all build test vet install e2e smoke pre-pr clean version help
 
 VERSION   := $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)

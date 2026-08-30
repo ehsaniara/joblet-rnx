@@ -3,7 +3,7 @@
 //
 // This is the client-only slice of the Joblet configuration surface. The server
 // config (joblet-config.yml) lives in the joblet server repository; rnx and the
-// server share no config file — only the proto contract (joblet-proto).
+// server share no config file - only the proto contract (joblet-proto).
 package config
 
 import (
