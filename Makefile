@@ -5,7 +5,7 @@ VERSION   := $(shell git describe --tags --always --dirty 2>/dev/null || echo de
 # Full hash: the version display needs >=8 chars, and e2e verifies it against HEAD
 GIT_COMMIT := $(shell git rev-parse HEAD 2>/dev/null || echo unknown)
 BUILD_DATE := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
-VPKG      := github.com/ehsaniara/joblet-rnx/pkg/version
+VPKG      := github.com/ehsaniara/joblet-rnx/v6/pkg/version
 
 LDFLAGS := -X $(VPKG).Version=$(VERSION) \
 	-X $(VPKG).GitCommit=$(GIT_COMMIT) \

@@ -10,8 +10,8 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
-	"github.com/ehsaniara/joblet-rnx/pkg/runtime"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/runtime"
 
 	pb "github.com/ehsaniara/joblet-proto/v2/gen"
 

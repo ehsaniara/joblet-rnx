@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
 
 	pb "github.com/ehsaniara/joblet-proto/v2/gen"
 

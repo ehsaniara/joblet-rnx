@@ -1,29 +1,29 @@
 class Rnx < Formula
   desc "Command-line client for the Joblet job execution platform"
   homepage "https://github.com/ehsaniara/joblet-rnx"
-  version "1.0.0"
+  version "6.0.0"
   license "MIT"
 
   # Placeholder checksums: regenerated per release by
   # scripts/update-homebrew-formula.sh after the assets are published.
   on_macos do
     on_arm do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v1.0.0/rnx-v1.0.0-darwin-arm64.tar.gz"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-arm64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
     on_intel do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v1.0.0/rnx-v1.0.0-darwin-amd64.tar.gz"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-amd64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v1.0.0/rnx-v1.0.0-linux-arm64.tar.gz"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-arm64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
     on_intel do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v1.0.0/rnx-v1.0.0-linux-amd64.tar.gz"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-amd64.tar.gz"
       sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end

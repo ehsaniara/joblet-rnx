@@ -3,8 +3,8 @@ package common
 import (
 	"fmt"
 
-	"github.com/ehsaniara/joblet-rnx/pkg/client"
-	"github.com/ehsaniara/joblet-rnx/pkg/config"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/client"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/config"
 )
 
 var (

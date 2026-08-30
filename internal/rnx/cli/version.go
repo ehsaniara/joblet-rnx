@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ehsaniara/joblet-rnx/internal/rnx/common"
-	"github.com/ehsaniara/joblet-rnx/pkg/version"
+	"github.com/ehsaniara/joblet-rnx/v6/internal/rnx/common"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/version"
 
 	"github.com/spf13/cobra"
 )

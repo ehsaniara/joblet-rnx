@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Regenerate Formula/rnx.rb for a published release.
-# Usage: ./scripts/update-homebrew-formula.sh v1.0.0
+# Usage: ./scripts/update-homebrew-formula.sh v6.0.0
 #
 # Fetches the release's checksums.txt and writes the formula with pinned
 # URLs and sha256 values. Run after the release workflow has published the
@@ -11,7 +11,7 @@ set -e
 
 VERSION="${1}"
 if [ -z "$VERSION" ]; then
-    echo "Usage: $0 <version>   (e.g. $0 v1.0.0)"
+    echo "Usage: $0 <version>   (e.g. $0 v6.0.0)"
     exit 1
 fi
 

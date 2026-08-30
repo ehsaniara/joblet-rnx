@@ -1,6 +1,6 @@
 # rnx
 
-`rnx` is the command-line client for [Joblet](https://github.com/ehsaniara/joblet) - 
+`rnx` is the command-line client for [Joblet](https://github.com/ehsaniara/joblet) -
 run, inspect, and manage isolated jobs, volumes, networks, and runtimes on a
 Joblet node over mTLS gRPC.
 
@@ -21,6 +21,15 @@ brew tap ehsaniara/rnx https://github.com/ehsaniara/joblet-rnx
 brew install rnx
 ```
 
+If you previously installed rnx through the old `ehsaniara/joblet` tap,
+remove it first so the two taps don't both claim the `rnx` name:
+
+```bash
+brew uninstall rnx 2>/dev/null; brew untap ehsaniara/joblet
+brew tap ehsaniara/rnx https://github.com/ehsaniara/joblet-rnx
+brew install rnx
+```
+
 From source:
 
 ```bash
@@ -31,7 +40,7 @@ make install          # -> /usr/local/bin/rnx (sudo)
 Or with the Go toolchain:
 
 ```bash
-go install github.com/ehsaniara/joblet-rnx/cmd/rnx@latest
+go install github.com/ehsaniara/joblet-rnx/v6/cmd/rnx@latest
 ```
 
 ## Compatibility
@@ -42,9 +51,9 @@ their only contract is the gRPC API,
 is defined by the proto contract both sides speak, not by matching version
 numbers. Any rnx release works with any Joblet release on the same contract.
 
-| rnx  | wire contract   | works with Joblet          |
-|------|-----------------|----------------------------|
-| v1.x | joblet-proto v2 | v5.0.2+ (any proto v2 server) |
+| rnx  | wire contract   | works with Joblet             |
+|------|-----------------|-------------------------------|
+| v6.x | joblet-proto v2 | v5.0.2+ (any proto v2 server) |
 
 Some commands need a server new enough to implement the RPC they call; see the
 [joblet-proto compatibility feature timeline](https://github.com/ehsaniara/joblet-proto/blob/main/COMPATIBILITY.md)

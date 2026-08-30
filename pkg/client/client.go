@@ -6,7 +6,7 @@ import (
 	"time"
 
 	pb "github.com/ehsaniara/joblet-proto/v2/gen"
-	"github.com/ehsaniara/joblet-rnx/pkg/config"
+	"github.com/ehsaniara/joblet-rnx/v6/pkg/config"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
