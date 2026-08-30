@@ -4,27 +4,25 @@ class Rnx < Formula
   version "6.0.0"
   license "MIT"
 
-  # Placeholder checksums: regenerated per release by
-  # scripts/update-homebrew-formula.sh after the assets are published.
   on_macos do
     on_arm do
       url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-arm64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "e9c00a4b95a4f8c740a47f3acc4cfd9c1850c31600051aa6e39c1c78dd72856b"
     end
     on_intel do
       url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-amd64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "bb57fda490b94e5618a6f206fdcf5e8983caad02a79eaa3baa723fc3055d8985"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-arm64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "060fe4ebfd6bc42020dcd0f66542876186356f105b6be64ebb0d6a0a98b5040c"
     end
     on_intel do
       url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-amd64.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "d94dc62670d337f8a7a61e9a3abbc9ffd8ae3e45f74c9bc32cd4cade82a3066d"
     end
   end
 
