@@ -1,28 +1,28 @@
 class Rnx < Formula
   desc "Command-line client for the Joblet job execution platform"
   homepage "https://github.com/ehsaniara/joblet-rnx"
-  version "6.0.0"
+  version "6.0.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-arm64.tar.gz"
-      sha256 "e9c00a4b95a4f8c740a47f3acc4cfd9c1850c31600051aa6e39c1c78dd72856b"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.1/rnx-v6.0.1-darwin-arm64.tar.gz"
+      sha256 "69fe96db0d9f24cb4b5618a9c97c8336af6f0530adb4a705b0555556a9db92bd"
     end
     on_intel do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-darwin-amd64.tar.gz"
-      sha256 "bb57fda490b94e5618a6f206fdcf5e8983caad02a79eaa3baa723fc3055d8985"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.1/rnx-v6.0.1-darwin-amd64.tar.gz"
+      sha256 "419aac6244cac3b0efc2232c758a6b5b556a0122f6ca2ee8a4befd4293071f66"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-arm64.tar.gz"
-      sha256 "060fe4ebfd6bc42020dcd0f66542876186356f105b6be64ebb0d6a0a98b5040c"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.1/rnx-v6.0.1-linux-arm64.tar.gz"
+      sha256 "d7615ee8b109c32372d0de5695231cda6711484a6b8c4801eeefb33734e3afce"
     end
     on_intel do
-      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.0/rnx-v6.0.0-linux-amd64.tar.gz"
-      sha256 "d94dc62670d337f8a7a61e9a3abbc9ffd8ae3e45f74c9bc32cd4cade82a3066d"
+      url "https://github.com/ehsaniara/joblet-rnx/releases/download/v6.0.1/rnx-v6.0.1-linux-amd64.tar.gz"
+      sha256 "d9a83d3d4c20f6167275e3eac5fbb4cc3ea7fe7072f8e598c3c88ea6b0c40d54"
     end
   end
 
